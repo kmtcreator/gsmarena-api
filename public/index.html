@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Information Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Device Information Search</h1>
+
+        <div class="search-box">
+            <label for="searchInput">Enter search terms (comma separated, e.g., iPhone, Samsung):</label>
+            <input type="text" id="searchInput" placeholder="Enter search terms">
+            <button id="getSearchResults">Search</button>
+        </div>
+
+        <div class="button-group">
+            <button id="getBrands">Get Brands</button>
+            <button id="getTopDevices">Get Top Devices</button>
+            <button id="getDeals">Get Deals</button>
+        </div>
+
+        <div class="zoom-buttons">
+            <button id="zoomIn">Zoom In</button>
+            <button id="zoomOut">Zoom Out</button>
+        </div>
+
+        <button id="exportPDF" class="export-btn">Export as PDF</button>
+
+        <div id="results" class="results"></div>
+    </div>
+</body>
+</html>

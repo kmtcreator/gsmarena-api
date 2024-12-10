@@ -1,0 +1,226 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;  /* Global margin for the entire body */
+    margin: 0;  /* Reset any default margin from the body */
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 50px auto;  /* Centers the container horizontally with margin on top and bottom */
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Search box */
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.search-box button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #45a049;
+}
+
+/* Button group */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 30px; /* Increased bottom margin */
+}
+
+.button-group button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+    flex: 1 0 45%;
+    max-width: 250px;
+    box-sizing: border-box;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Export Button */
+.export-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;  /* Adjusted top margin for better spacing */
+}
+
+.export-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Zoom buttons */
+.zoom-buttons {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    margin-top: 10px;  /* Adjusted margin for zoom buttons */
+}
+
+.zoom-buttons button {
+    padding: 8px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.zoom-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Results display */
+.results {
+    margin-top: 30px;  /* Increased top margin */
+    margin-bottom: 20px;  /* Added bottom margin */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1rem;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .button-group button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        flex: 1 0 45%;
+    }
+
+    .search-box input {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .search-box button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .zoom-buttons button {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+
+    .export-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .button-group button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        flex: 1 0 100%;
+    }
+
+    .zoom-buttons {
+        right: 10px;
+        top: 10px;
+    }
+
+    .export-btn {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+}
